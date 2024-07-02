@@ -13,10 +13,15 @@
 }
 
 .img-logo img{
-    width: 550px;
-    height: 350px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 450px;
 }
+
 .img-logo{
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
