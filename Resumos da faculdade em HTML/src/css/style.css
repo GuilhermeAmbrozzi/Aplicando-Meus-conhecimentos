@@ -1,15 +1,83 @@
+body {
+    background-color: #f0f0f0;
+  }
+
+td{
+    text-align: center;
+    display: table-cell;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    
+}
+
+td a{
+    text-decoration: none; /*remove qualquer sublinhado padrão.*/
+    color: inherit;/*a cor do link é o mesma cor do texto pai.*/
+    position: relative; /*é necessário para que o ::after seja posicionado corretamente em relação ao link.*/
+    display: block;
+}
+
+.link-engenharia-software::after,
+.link-fundamentos::after,
+.link-algoritmo::after,
+.link-rede::after,
+.link-tecnicas::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;/*define a altura da borda inferior*/
+  display: block;
+  margin-top: 5px;/*adiciona um espaçamento entre o texto e a borda.*/
+  right: 0;
+  transition: width 0.3s ease;/*configuram a largura inicial e a transição suave.*/
+}
+
+.link-engenharia-software:hover::after {
+    width: 100%;
+    left: 0;
+    background: #ecc012;
+  }
+
+.link-fundamentos:hover::after{
+    width: 100%;
+    left: 0;
+    background: #99CC33;  
+}
+
+.link-algoritmo:hover::after{
+    width: 100%;
+    left: 0;
+    background: #66cc33;
+}
+.link-rede:hover::after{
+    width: 100%;
+    left: 0;
+    background: #33cccc;
+}
+.link-tecnicas:hover::after{
+    width: 100%;
+    left: 0;
+    background: #3399ff;
+}
+
 .boas-vindas h1{
+    color: #0056b3;
     margin-top: 10px;
     margin-bottom: 0;
     text-align: center; 
-    font-family: Embed code;
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 .boas-vindas h2{
+    color: #0056b3;
     margin-top: 0;
     text-align: center;
-    font-family: Cormorant Garamond;
+    font-family: 'Raleway', sans-serif;
     font-size: 30px ;
+    text-transform: uppercase;
+    letter-spacing: 7px;
 }
 
 .img-logo img{
@@ -26,4 +94,39 @@
     align-items: center;
     justify-content: center;
 }
+
+.td-engenharia{
+    border-top: 5px solid;
+    border-color: #999933;
+    padding: 3px 0.25em;
+    width: 11.1%;
+}
+
+.td-fundamentos{
+    border-top: 5px solid;
+    border-color: #669933;
+    padding: 3px 0.25em;
+    width: 11.1%;
+}
+
+.td-algoritmo{
+    border-top: 5px solid;
+    border-color: #339933;
+    padding: 3px 0.25em;
+    width: 11.1%;
+}
+
+.td-rede{
+    border-top: 5px solid;
+    border-color: #339999;
+    padding: 3px 0.25em;
+    width: 11.1%;
+}
+.td-tecnicas{
+    border-top: 5px solid;
+    border-color: #336699;
+    padding: 3px 0.25em;
+    width: 11.1%;
+}
+
 
