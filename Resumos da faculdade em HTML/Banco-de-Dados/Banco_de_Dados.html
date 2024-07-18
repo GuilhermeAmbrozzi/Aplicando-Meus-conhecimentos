@@ -17,30 +17,117 @@
 
     <main>
         <article>
-            <p>
-                Na sociedade do século XXI, temos informação em abundância. O desafio dos próximos anos é encontrar
-                formar eficientes de processar os dados que já temos para gerar conhecimento e riquezas.
-            </p>
-            <p>
-                Nos últimos anos, boa parte dos softwares desenvolvidos envolve mais do que processar informações. Essas
-                informações devem ser armazenadas em um mecanismo confiável e que venha possibilitar o acesso simples e
-                rápido à leitura e escrita dessas informações.
-            </p>
-            <p>
-                Por isso venho surgir o termo "Banco de Dados" que alguns anos atrás escrever sobre o tema seria uma
-                tarefa relativamente tranquila, pois acreditavam tratar-se de um assunto absolutamente consolidado. Mas
-                como podemos observar o nosso mundo está em constante mudança e com o surgimento de novos negócios ,
-                provocaram uma ruptura na forma de pensar de como essas informações devem ser armazenadas.
-            </p>
-            <p>
-                Por isso quando pensamos sobre o significado de "Banco de Dados" logo, lembramos das instituições bancarias, que guardam de modo bastante seguro o nosso <b>dinheiro</b>. Os "bancos de dados" seriam, então, ferramentas que guardariam nossas informações <b>(dados)</b> de modo também supostamente seguro e confiável.
-            </p>
-            <p>
-                Entenda que <strong>um banco de dados é uma coleção de dados relacionados. Os dados são fatos que podem ser gravados e que possuem um significado implícito. Por exemplo, uma planilha de Excel, onde pode conter nomes, telefones, e-mails e endereços.</strong> Com o decorrer dos estudos entraremos mais afundo no seu funcionamento e com isso uma melhor compreensão.
-            </p>
+            <section>
+                <h2>Introdução</h2>
+                <p>
+                    Na sociedade do século XXI, temos informação em abundância. O desafio dos próximos anos é encontrar
+                    formas eficientes de processar os dados que já temos para gerar conhecimento e riquezas.
+                </p>
+                <p>
+                    Nos últimos anos, boa parte dos softwares desenvolvidos envolve mais do que processar informações,
+                    essas
+                    informações devem ser armazenadas em um mecanismo confiável e que venha possibilitar o acesso
+                    simples e
+                    rápido à leitura e escrita desses dados.
+                </p>
+                <p>
+                    Por isso surgiu o termo "Banco de Dados" que, alguns anos atrás escrever sobre o tema seria uma
+                    tarefa relativamente tranquila, pois acreditavam tratar-se de um assunto absolutamente consolidado.
+                    Mas
+                    como podemos observar o nosso mundo está em constante mudança e com o surgimento de novos negócios,
+                    provocaram uma ruptura na forma de pensar de como essas informações devem ser armazenadas.
+                </p>
+                <p>
+                    Por isso, quando pensamos sobre o significado de "Banco de Dados" logo, lembramos das instituições
+                    bancarias, que guardam de modo bastante seguro o nosso <b>dinheiro</b>. Os "bancos de dados" seriam,
+                    então, ferramentas que guardariam nossas informações <b>(dados)</b> de modo também supostamente
+                    seguro e
+                    confiável.
+                </p>
+                <p>
+                    Entenda que <strong>um banco de dados é uma coleção de dados relacionados. Os dados são fatos que
+                        podem
+                        ser gravados e que possuem um significado implícito. Por exemplo, uma planilha de Excel, onde
+                        pode
+                        conter nomes, telefones, e-mails e endereços.</strong> Com o decorrer do tempo entraremos mais
+                    afundo no seu funcionamento e com isso uma melhor compreensão.
+                </p>
+            </section>
+            <section>
+                <h2>
+                    Características de Sistemas de Banco de Dados
+                </h2>
+                <p>
+                    Para entender um Banco de Dados e como ele nos ajuda, vamos analisar algumas características
+                    presentes em nosso cotidiano. Procure pensar em algumas aplicações que você utiliza e não fazem
+                    uso de um <abbr title="Sistema Gerenciador de Banco de Dados"><b>SGBD</b></abbr>. Entre alguns
+                    exemplos,
+                    temos as planilhas,onde há a necessidade de armazenar informações manipuladas por meio de arquivos.
+                </p>
+                <p>
+                    Em qualquer aplicação onde temos a necessidade do armazenamento de dados, é necessário dispor de um
+                    mecanismo que permita que esses sejam gravados de modo persistente, possibilitando que você os
+                    carregue eletrônica ou fisicamente para diferentes locais de maneira bastante simples. No entendo,
+                    uma desvantagem desse modelo é o trabalho envolvido na criação de um formato e no processamento da
+                    gravação e recuperação dos dados, e acredite, não é pouco trabalho!
+                </p>
+                <p>
+                    Já em um Banco de Dados, temos à nossa disposição o <b>SGBD</b> que é um grupo de programas que
+                    trabalham em conjunto com o <b>sistema operacional</b> para <b>criar, processar, armazenar,
+                        recuperar, controlar</b> e <b>gerenciar</b> os dados. Desse modo, uma série de preocupações
+                    passa a ser delegada a um software. Vamos agora analisar uma série de características que
+                    diferenciam a
+                    abordagem de sistemas de banco de dados da manipulação manual das informações (como em arquivos, por
+                    exemplo).
+                </p>
+            </section>
+            <section>
+                <p>
+                    <strong>Natureza auto descritiva:</strong> É uma característica fundamental que distingue os
+                    sistemas de banco de dados de outras abordagens: as metainformações sobre o banco de
+                    dados são armazenados em conjunto.
+                </p>
+                <div class="conteiner">
+                    <figure><img src="./img/tabela_0.jpg"
+                            alt="Tabela onde contém informações de matrícula, nome, e-mail e idade">
+                        <figcaption>Foto ilustrativa tabela</figcaption>
+                    </figure>
+                    <p class="sobre-mim">Nessa imagem, podemos observar a visão do professor que busca informações dos
+                        alunos em tabela salva no banco de dados. Ele encontrar dados como matrícula, nome, e-mail e
+                        idade.</p>
+                </div>
+                <div class="conteiner">
+                    <figure>
+                        <img src="./img/tabela_0.1.jpg" alt="Metainformações">
+                        <figcaption>
+                            Foto ilustrativa metainformações
+                        </figcaption>
+                    </figure>
+                    <p class="sobre-mim">Já nessa segunda foto, podemos observar as metainformações armazenadas no banco
+                        de dados, que incluem tipo, tamanho e restrições. Podemos ter uma <abbr
+                            title="Primary key">PK</abbr> como a matrícula do aluno, pois é o identificador único de um
+                        registro na tabela. Isso vai dependerá de cada projeto do banco de dados.</p>
+                </div>
+            </section>
+            <br>
+            <section>
+                <p><strong>Isolamento entre Programa e Dados:</strong> Isso quer dizer que não tem uma dependência dos
+                dados com os programas que controlam esses dados. Para um melhor entendimento, você pode modificar suas
+                aplicações sem interfere nos dados armazenados. Além disso, se você modificar seus dados, também não
+                interfere nas aplicações, pois são dois componentes separados, embora exista uma relação entre eles.
+                Essa característica aumenta bastante o nível de <abbr
+                    title="é o conceito que busca contemplar os três tipos de manutenção já existentes: corretiva, preditiva e preventiva">manutenibilidade</abbr>
+                do sistema, quando bem aplicada.</p>
+                <figure><img src="./img/img_ 0.2.jpg" alt="Imagem que mostra o isolamento entre o programa e os dados."><figcaption>
+                    Foto ilustrativa Isolamento entre Programa e Dados.
+                </figcaption></figure>
+            </section>
+            <section>
+                <p>
+                    <strong>Múltiplas visões dos dados: </strong>
+                </p>
+            </section>
         </article>
-        <hr>
-
     </main>
 </body>
 
