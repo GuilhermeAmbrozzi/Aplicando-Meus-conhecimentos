@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <title>Transações e Vantagens</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <article>
+            <section>
+                <h2>Transações</h2>
+                <p>
+                    O conceito de transação é fundamental em sistema de banco de dados, é considerada como uma "unidade
+                    de trabalho", que é realizada em qualquer sistema computacional de um modo coerente e independente
+                    de outras transações. Elas devem permitir que o sistema esteja num estado coerente antes e depois da
+                    sua execução, independente de falhas ou outros problemas que possam ocorrer. Devem permitir também
+                    que vários clientes diferentes acessem concorrentemente o sistema sem que isso possa corromper ou
+                    levar a estados que não sejam considerados coerentes.
+                </p>
+                <p>
+                    A definição do conceito de transações envolve o <abbr
+                        title="Palavra que se forma pela junção das primeiras letras ou das sílabas iniciais de um grupo de palavras, de uma expressão: a ANATEL, Agência Nacional de Telecomunicações, é um exemplo de acrônimo">acrônimo</abbr>
+                    <b>ACID</b>, oriundo das propriedades de <strong>Atomicidade, Consistência, Isolamento</strong> e
+                    <strong>Durabilidade.</strong>
+                </p>
+            </section>
+            <section>
+                <h2>Atomicidade</h2>
+                <p>
+                    <strong>Atomicidade:</strong> A propriedade de atomicidade em um banco de dados pressupõe que as
+                    operações realizadas numa transação sejam todas <strong>realizadas por completo ou que nenhuma seja
+                        realizada.</strong> Isso permite que, durante a nossa interação com um banco de dados, possamos
+                    agrupar vários comandos relacionados com a garantia de que todos sejam executados, de modo que as
+                    informações armazenadas permaneçam em um estado consistente após a execução da transação.
+                </p>
+                <p>
+                    Vamos imaginar uma transferência de valores de uma conta bancária para outra. Primeiramente, o banco
+                    de dados vai ler a conta <b>A</b>, depois será sacado R$ 100,00 dessa conta, e então a operação de
+                    subtração será salva. Em seguida, será lida a conta <b>B</b> e creditado nela o valor de R$ 100,00,
+                    com a operação de crédito sendo salva. Note que são realizadas seis operações no total. Caso ocorra
+                    um erro em qualquer uma delas, o banco de dados voltará para seu estado inicial, cancelando a
+                    transferência.
+                </p>
+            </section>
+            <section>
+                <h2>Consistência</h2>
+                <p>
+                    <strong>Consistência:</strong> Essa propriedade assegura que a execução de qualquer transação trará o banco de dados de um estado consistente para outro estado também consistente. Isso implica que todos os dados de um banco de dados devem ser válidos de acordo com um conjunto de regras que podem incluir restrições de <strong>tipo, valor e referência</strong> entre informações.
+                </p>
+                <p>
+                    Usando o exemplo de transferências entre contas novamente, se antes da transferência o valor na conta <b>A</b> é de R$ 1000,00 e o valor na conta <b>B</b> é de R$ 500,00, a soma das duas contas no início da operação é de R$ 1500,00. Após a transferência (independente do valor transferido), a soma das duas contas deve permanecer R$ 1500,00, mantendo a consistência.
+                </p>
+            </section>
+            <section>
+                <h2>Isolamento</h2>
+                <p>
+                    Mesmo existindo operações simultâneas o resultado final de todas as transações devem ser equivalentes.        
+                </p>
+                <p>
+                    Voltamos ao exemplo de transferência. Dentro de uma instituição bancária podem estar ocorrendo várias transferências ao mesmo tempo. No entanto, cada uma delas deve estar isolada das outras, garantindo a atomicidade e consistência das operações. O isolamento assegura que as operações de uma transação não afetem a execução de outras, mesmo quando são realizadas simultaneamente.
+                </p>
+            </section>
+            <section>
+                <h2>Durabilidade</h2>
+                <p>
+                    A durabilidade garante que uma vez que uma transação tenha sido finalizada com sucesso, os dados terão a garantia de terem sido armazenados corretamente, independente da eventualidade de falhas, falta de energia, erros de aplicações entre outros.
+                </p>
+                <p> 
+                    Esta propriedade é crucial para a confiabilidade dos bancos de dados, tornando-os "ferramentas sagradas" para muitas empresas. Imagine o impacto de uma empresa perder todos os seus dados: a continuidade dos negócios estaria em risco. Mais importante do que os dados em si é o uso que se faz deles, pois a durabilidade assegura que essas informações vitais estarão sempre disponíveis e intactas.
+                </p>
+            </section>
+
+        </article>
+    </main>
+</body>
+
+</html>

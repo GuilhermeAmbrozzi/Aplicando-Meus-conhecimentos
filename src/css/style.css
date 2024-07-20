@@ -14,7 +14,7 @@ p{
     margin: 0.5em 0  0 ;
     padding: 5px;
     display: block;
-    font-size: medium ;
+    font-size: 20px ;
     line-height: 1.2;
 
 }
@@ -22,7 +22,7 @@ p{
 figure img{
     margin: 18px 10px 11px 10px;
     width: 450px;
-    height: 250px;
+    height: 350px;
 
 }
 

@@ -111,20 +111,74 @@
             </section>
             <br>
             <section>
-                <p><strong>Isolamento entre Programa e Dados:</strong> Isso quer dizer que não tem uma dependência dos
-                dados com os programas que controlam esses dados. Para um melhor entendimento, você pode modificar suas
-                aplicações sem interfere nos dados armazenados. Além disso, se você modificar seus dados, também não
-                interfere nas aplicações, pois são dois componentes separados, embora exista uma relação entre eles.
-                Essa característica aumenta bastante o nível de <abbr
-                    title="é o conceito que busca contemplar os três tipos de manutenção já existentes: corretiva, preditiva e preventiva">manutenibilidade</abbr>
-                do sistema, quando bem aplicada.</p>
-                <figure><img src="./img/img_ 0.2.jpg" alt="Imagem que mostra o isolamento entre o programa e os dados."><figcaption>
-                    Foto ilustrativa Isolamento entre Programa e Dados.
-                </figcaption></figure>
+                <div class="conteiner">
+                    <figure><img src="./img/img_ 0.2.jpg"
+                            alt="Imagem que mostra o isolamento entre o programa e os dados.">
+                        <figcaption>
+                            Foto ilustrativa Isolamento entre Programa e Dados.
+                        </figcaption>
+                    </figure>
+                    <p><strong>Isolamento entre Programa e Dados:</strong> Isso quer dizer que não tem uma dependência
+                        dos
+                        dados com os programas que controlam esses dados. Para um melhor entendimento, você pode
+                        modificar suas
+                        aplicações sem interfere nos dados armazenados. Além disso, se você modificar seus dados, também
+                        não
+                        interfere nas aplicações, pois são dois componentes separados, embora exista uma relação entre
+                        eles.
+                        Essa característica aumenta bastante o nível de <abbr
+                            title="é o conceito que busca contemplar os três tipos de manutenção já existentes: corretiva, preditiva e preventiva">manutenibilidade</abbr>
+                        do sistema, quando bem aplicada.</p>
+                </div>
             </section>
             <section>
                 <p>
-                    <strong>Múltiplas visões dos dados: </strong>
+                    <strong>Múltiplas visões dos dados: </strong>Embora não seja uma característica fundamental, muitos
+                    SGBDs fornecem a capacidade de diferentes usuários, com permissões distintas, acessarem diferentes
+                    "visões" dos dados. Para melhor entendimento, dentro de uma empresa temos diferentes cargos e, com
+                    isso, diferentes usuários têm "visões" distintas dos dados de acordo com o seu cargo. Essa abordagem
+                    é muito utilizada em sistemas cliente/servidor ou na integração de aplicações mediante banco de
+                    dados.
+                </p>
+                <p>
+                    Esse modelo teve origem no final da década de 1990, embora ainda hoje seja possível encontrar
+                    aplicações que utilizem esse modelo. Recomenda-se que em novas aplicações, essa abordagem seja
+                    substituída por uma orientação a serviços, como <abbr
+                        title="Service Oriented Architecture">SOA</abbr> ou <abbr
+                        title="REpresentational State Transfer">REST</abbr>. Vou deixar uma explicação resumida aqui,
+                    mas recomendo procurar artigos sobre o assunto para um entendimento mais profundo.
+                </p>
+            </section>
+            <br>
+            <section>
+                <h4>SOA (Service-Oriented Architecture) em Banco de Dados:</h4>
+                <p>
+                    SOA em banco de dados refere-se à adoção dos princípios de arquitetura orientada a serviços para
+                    gerenciar e acessar dados de forma modular e interoperável. Isso envolve a criação de serviços que
+                    encapsulam operações de banco de dados específicas, permitindo que diferentes partes de uma
+                    aplicação ou sistemas externos possam acessar dados de maneira padronizada e independente da
+                    implementação do banco de dados subjacente. Essa abordagem facilita a reutilização de serviços,
+                    aumenta a flexibilidade e promove a integração entre sistemas heterogêneos.
+                </p>
+                <h4>REST (Representational State Transfer)</h4>
+                <p>
+                    REST é um estilo arquitetural utilizado para projetar sistemas de software, frequentemente aplicado
+                    na construção de APIs web. Ele se baseia em princípios simples e padronizados, como o uso de métodos
+                    HTTP (GET, POST, PUT, DELETE) para operações CRUD (Create, Read, Update, Delete) em recursos
+                    identificados por URLs únicas. Uma API RESTful permite que clientes façam solicitações para criar,
+                    ler, atualizar ou excluir recursos de um servidor de forma uniforme e eficiente. Essa abordagem
+                    facilita a escalabilidade, a simplicidade na manutenção e promove a interoperabilidade entre
+                    diferentes sistemas.
+                </p>
+                <p>
+                    Em resumo, SOA em banco de dados foca na organização de funcionalidades de banco de dados como
+                    serviços reutilizáveis, enquanto REST define um padrão para interações cliente-servidor na web,
+                    usando HTTP e URLs para acessar e manipular recursos.
+                </p>
+            </section>
+            <section>
+                <p>
+                    <strong>Acesso concorrente de múltiplos usuários: </strong>Um <B>SGBDs</B> deve permitir o acesso de múltiplos usuários simultaneamente. Além disso, o acesso deve ser <abbr title="O gerenciador SGBD deve controlar os acessos, permitindo que todos os usuários tenham visão da mesma tabela, sem que um acesso interfira no outro.">concorrente</abbr>. Dessa forma, vários usuários têm a impressão de que estão executando instruções ao mesmo tempo, mas o sistema controla o acesso colocando-os em fila para evitar contenção. Essa execução é bastante rápida, o que cria a impressão de pseudoparalelismo.  
                 </p>
             </section>
         </article>
