@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+
+    <title>Vantagens de se usar um SGBD</title>
+</head>
+<body>
+    <main>
+        <article>
+            <section>
+                <h2>Papéis Assumidos Pelos Usuários de SGBDs</h2>
+            </section>
+            <section>
+                <h3>Desenvolvedores de SGBDs</h3>
+                <p>
+                    São pessoas que projetam e codificam os SGBDs. Nesses papéis incluem os funcionários de empresas como <em>Oracle, IBM e Microsoft</em> que atuam diretamente na programação do software SGBD. No caso de SGBDs livre, podem ser também voluntários ou pessoas e empresas interessadas na evolução do software. Normalmente são programadores altamente qualificados que trabalham no código-fonte do SGBD.
+                </p>
+            </section>
+            <section>
+                <h3>Desenvolvimento de Aplicações e Administradores de Banco de Dados (<abbr title="DATABASE ADMINISTRATORS">DBAs</abbr>)</h3>
+                <p>
+                    São pessoas que desenvolvem software que armazena as informações em um SGBDs. Essas equipes de desenvolvedores são separadas em <em>Desenvolvedores e DBAs</em>. Os primeiros desenvolvem o <b>software que acessa o SGBD</b>. Os segundos os <b>bancos de dados e os mantêm</b>. Em desenvolvimentos mais modernos, tende-se a eliminar essa distinção entre os papéis, pois quanto maior a distância entre os membros do projeto, menor tende a ser a qualidade do software entregue.
+                </p>
+            </section>
+            <section>
+                <h3>Usuários Finais</h3>
+                <p>
+                    São pessoas que não interagem diretamente com os bancos de dados, e sim com as aplicações criadas pelos desenvolvedores de software que armazenam suas informações em um SGBDs.
+                </p>
+            </section>
+            <section>
+                <h2>Vantagens de se Utilizar um SGBD</h2>
+                <p>
+                    Já vimos em algumas abordagens anteriores, e citamos algumas vantagens de se utilizar um SGBD para armazenar as informações de nossas aplicações. Contudo, colocaremos de modo mais detalhado, de forma a justificar seu uso em uma diversidade de situações.
+                </p>
+            </section>
+            <section>
+                <h3>Diminuir a Redundância e Fornecer Consistência</h3>
+                <p>Imagine uma situação que você resolve elaborar um documento e necessita da colaboração de várias pessoas para fazê-lo. É criado um escopo e esse documento é enviado por e-mail a todos os interessados. Cada um deles realiza as suas modificações em suas próprias cópias dos documentos e, depois, repassa novamente por e-mail.<em> Quem tem a última versão do documento? Quais são os dados corretos?</em> Essas são perguntas difíceis de serem respondidas e provavelmente exigirá muito trabalho manual para se chegar à versão final do documento.</p>
+                <p>
+                    Um SGBD centraliza todas essas informações, fazendo com que todos os usuários acessem os mesmos dados. Desse modo, diminui-se a redundância pois há somente uma copia dos dados a serem manipulados. Isso também permite que o banco de dados sempre permaneça em um estado consistente, pois todos os usuários terão sempre a <em>última versão</em> dos dados. Evitando assim a possibilidade de alguém permanecer com um <em>pedaço</em> dos dados antigos e outro <em>pedaço</em> com a informação atual.
+                </p>
+            </section>
+        </article>
+    </main>    
+</body>
+</html>
