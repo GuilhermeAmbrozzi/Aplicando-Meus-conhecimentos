@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="/src/img/Logo/icone-logo.jpg" type="image/jpg">
+
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+
+    <title>Modelo Relacional</title>
+</head>
+
+<body>
+    <header>
+        <article>
+            <section>
+                <h2>Introdução ao Modelo Relacional</h2>
+                <p>
+                    Agora abordaremos o modelo de dados relacional que é o modelo utilizado em <em>Bando de Dados
+                        Relacionais</em>. Esse modelo é atribuído a <em>Ted Codd da IBM em 1970</em> que se popularizou
+                    devido a sua simplicidade e sólidos fundamentos matemáticos: é baseado na teoria geral dos conjuntos
+                    e em lógica matemática.
+                </p>
+                <p>
+                    Com a criação dos primeiros SGBDs na década de 1980, acabaram substituindo os modelos mais antigos
+                    de banco de dados. Isso ocorreu pelo fato de terem características fortes como: capacidade de gerir
+                    grande quantidade de dados, rapidez na identificação e tratamento de erros, realização de pesquisa
+                    de dados de maneira mais rápida. Alguns exemplos de banco de dados relacionais são <em>DB2(IMB),
+                        Oracle e MySQL(Oracle), SQLServer(Microsoft) e Firebird(Software Livre).</em>
+                </p>
+            </section>
+            <section>
+                <h3>O Modelo Relacional</h3>
+                <p>
+                    Quando vamos criar um banco de dados devemos entender os conceitos do modelo relacional, pois nos
+                    baseamos para a implementação inicial. Mesmo sendo um modelo de segunda geração tem uma sólida base,
+                    pois foi construído sobre a teoria dos conjuntos e trata-se de um modelo com estruturas de tabelas e
+                    alguns conceitos.
+                </p>
+                <p>
+                    Ele nos permite representar uma estrutura lógica do projeto com uma visão genérica. Isso ocorre
+                    devido a sua estrutura ser simples e clara, possibilitando representar os dados do mundo real como
+                    objetos denominados <em>Entidades ou Conjunto de Entidade.</em>
+                </p>
+                <div class="figura figura-4"><img src="/src/img/img-Banco-de-Dados/figura-4.png" alt=""></div>
+                <figcaption class="figcaption">Componentes DER (Diagrama Entidade e Relacionamento)</figcaption>
+            </section>
+            <section>
+                <h3>Entidades (Tabelas)</h3>
+                <p>
+                    A entidade é uma representação gráfica de um conjunto que é feita por um retângulo com o nome da
+                    entidade dentro dele. Para identificarmos uma entidade devemos considerar objetos, coisas ou algo
+                    que seja relevante no levantamento dos dados(requisitos). Se pegarmos uma entidade com nome
+                    <i>Alunos</i>, em que é representado um conjunto de alunos. Da mesma forma podemos dizer que a
+                    entidade <i>Carros</i> representa um conjunto de carros, e assim sucessivamente.
+                </p>
+                <p>
+                    Podemos classificar as entidades em <em>Concretas e Abstratas</em>, em que as entidades
+                    <b>Concretas</b> são entidades como objetos do mundo real que pode ser separado e distinguível como:
+                    <i>Carro, Alunos, Livro e Funcionário</i>. Já entidades <b>Abstratas</b> são aquelas que não temos
+                    de maneira tangível como: <i>Viagem, Compra, Aluguel e Empréstimo</i>. Com isso tenha em mente que a
+                    forma de representá-las é a mesma.
+                </p>
+                <div class="figura"><img src="/src/img/img-Banco-de-Dados/figura-5.png" alt=""></div>
+                <figcaption class="figcaption">Exemplo de entidades concretas e entidades abstratas</figcaption>
+            </section>
+            <section>
+                <h3>Introdução à Modelagem</h3>
+                <p>
+                    Agora que entendemos a entidade, é importante saber como ela é aplicada, podemos utilizar a
+                    <em>Discrição Textual Narrativa</em>, que seria o levantamento de requisitos junto ao cliente, ou
+                    seja, uma entrevista onde vamos retirar as informações devidas para implementar o sistema. Nesse
+                    momento, é importante anotar todas as necessidades do cliente e, a partir delas, iremos analisar os
+                    substantivos das frases e, coso seja relevante ao sistema, podemos transformá-los em
+                    <i>Entidade</i>, por exemplo:
+                </p>
+
+                <pre>
+  Na frase: 'A bibliotecária empresta um livro'  
+                </pre>
+                <p>
+                    Podemos retirar duas possíveis entidades, sendo elas: <i>Bibliotecária e Livro</i>
+                </p>
+                <pre>
+  Já na frase: 'O carro percorre vários itinerários'  
+                </pre>
+                <p>
+                    Podemos retirar duas possíveis entidades, sendo elas : <i>Carros e Itinerário</i>
+                </p>
+                <p>
+                    Procure entender a importância de fazer as perguntas corretas ao seu cliente, por que toda a informação que você conseguir reunir do negócio, é importante, pois assim poderá identificar quais as entidades necessárias para o seu projeto. O levantamento de requisitos está dentro da parte fundamental na criação de um software assim como para a implementação de um banco de dados bem estruturado, por isso tenha em mente que toda a <em><b>Documentação é importantíssima</b></em>.
+                </p>
+                <p>
+                    Dicas para uma boa modelagem:
+                </p>
+                <ul>
+                    <li>Ter em mente o cenário a ser modelado</li>
+                    <li>Detectar os substantivos no momento da análise do sistema.</li>
+                    <li>Nomear apropriadamente as entidades detectadas.</li>
+                    <li>Padronizar os nomes (plural, singular, abreviações).</li>
+                    <li>Fazer um diagrama em um rascunho de próprio punho em papel.</li>
+                    <li>Definir o tipo de organização mais adequado.</li>
+                    <li>Realizar um bom levantamento do método manual e do procedimento manual junto ao principal usuário.</li>
+                </ul>
+            </section>
+        </article>
+    </header>
+</body>
+
+</html>
