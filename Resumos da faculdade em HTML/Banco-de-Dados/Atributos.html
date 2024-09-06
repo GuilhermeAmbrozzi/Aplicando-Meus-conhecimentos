@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+
+    <title>Atributos</title>
+</head>
+
+<body>
+    <main>
+        <article>
+            <section>
+                <h2>Atributos</h2>
+                <p>
+                    Os atributos são propriedades utilizadas para descrever uma entidade, podemos assim afirmar que os
+                    <i>Atributos</i> <b>são características contidas nas <em>Entidades</em></b>. Por exemplo, em uma
+                    entidade Cliente, podemos relacionar os atributos <strong>CPF, NOME, IDADE, ENDEREÇO, BAIRRO E
+                        CIDADE</strong>
+                </p>
+
+                <div class="figura"><img src="/src/img/img-Banco-de-Dados/figura-6.png" alt=""></div>
+                <figcaption class="figcaption">Exemplo de Atributos em uma Entidade.</figcaption>
+                <p>
+                    Outra maneira de demonstrar um Entidade e Atributos é em forma de Planilha. Verificamos que a tabela
+                    <b>PRODUTOS</b> contém atributos que são os nomes da colunas e um conceito novo chamado <i>TUPLA</i>
+                    de modo formal, uma linha é denominada de Tupla..
+                </p>
+
+                <div class="figura"><img src="/src/img/img-Banco-de-Dados/figura-7.png" alt=""></div>
+                <figcaption class="figcaption">Exemplo de uma entidade em formato de colunas.</figcaption>
+            </section>
+            <section>
+                <h3>Tipos de Atributos</h3>
+                <ul>
+                    <li>
+                        <em>Atributo Simples:</em> Contém um único valor para cada elemento da entidade. Nesse caso,
+                        pode ocorrer uma informação repetida. Para uma entidade <b>Cliente</b>, temos um nome para cada
+                        cliente podendo ocorrer de dois clientes com o mesmo nome, mas informando um dado para cada
+                        cliente. Segue exemplo da representação.
+                    </li>
+                    <div class="figura"><img src="/src/img/img-Banco-de-Dados/figura-8.png" alt=""></div>
+                    <figcaption class="figcaption">Exemplo de atributos simples.</figcaption>
+                    <li>
+                        <em>Atributo Multivalorado:</em> Permite conter informações com diferentes valores. É uma
+                        solução do problema quando, você tem vários telefones para um <i>Funcionário ou Cliente.</i>.
+                        Segue exemplo, analise que no atributo telefone está com 2 cíngulos essa é a sua representação.
+                    </li>
+                    <div class="figura"><img src="/src/img/img-Banco-de-Dados/figura-9.png" alt=""></div>
+                    <figcaption class="figcaption">Exemplo de um atributo multivalorado.</figcaption>
+                    <li>
+                        <em>Atributo Composto:</em> Nos permite indicar um atributo que pode ser dividido em outros. Um
+                        exemplo pode ser o <b>ENDEREÇO</b>, que podemos dividir em <strong><em>RUA, CIDADE, ESTADO e
+                                CEP</em></strong>.
+                    </li>
+                    <div class="figura"><img src="/src/img/img-Banco-de-Dados/figura-10.png" alt=""></div>
+                    <figcaption class="figcaption">Exemplo de um atributo do tipo composto.</figcaption>
+                    <li>
+                        <em>Atributo Chave:</em> Quando temos atributos de uma entidade, é importante sempre indicarmos
+                        um identificador, que podemos chamar também de <b>Atributo-Chave</b>. Esse atributo irá
+                        identificar o item da entidade de maneira única <em>(sem repetições)</em> no conjunto de
+                        elementos.
+                    </li>
+                </ul>
+                <p>
+                    O <em>Atributo-Chave</em> deve ser íntegro, ou seja, sem repetições, e também não pode ser nulo. A
+                    sua representação pode ser de maneira sublinhada ou com um círculo destacado na borda em negrito.
+                </p>
+                <div class="figura"><img src="/src/img/img-Banco-de-Dados/figura-11.png" alt=""></div>
+                <figcaption class="figcaption">Exemplo de um atributo do tipo Chave</figcaption>
+                <p>
+                    Para entender de uma forma mais clara, para a entidade <b>Funcionários</b>, temos os seguintes
+                    atributos.
+                </p>
+                <p>
+                    <b>Endereço:</b> Analisando esse atributo, sabemos que pode ocorrer de mais de um funcionário
+                    morando no mesmo endereço, logo, ele não pode ser classificado como um atributo identificador.
+                </p>
+                <p>
+                    <b>Nome:</b> Esse atributo pode confundir você um pouco, pois cada funcionário tem seu nome, porém,
+                    pode haver funcionários com o mesmo nome, logo, podemos analisar que se usarmos ele como
+                    identificador pode ocorrer algum erro.
+                </p>
+                <p>
+                    <b>Matrícula:</b> Para cada funcionário da empresa é gerado uma matrícula que serve para lhe
+                    identificar na empresa e que não pode se repetir. Esse atributo pode sim ser classificado como
+                    <em>Atributo-Chave</em>, devendo ser destacado entre os demais atributos.
+                </p>
+                <div class="figura"><img src="/src/img/img-Banco-de-Dados/figura-12.png" alt=""></div>
+                <figcaption class="figcaption">Exemplo de um atributo chave em uma entidade.</figcaption>
+            </section>
+            <section>
+                <h3>Domínio</h3>
+                <p>
+                    Para cada atributo criado devemos associar um tipo a ele. A essa associação, damos o nome de
+                    domínio. Segue alguns tipos de domínio.
+                </p>
+                <ul>
+                    <li>Numéricos: inteiros e reais.</li>
+                    <li>Caracteres</li>
+                    <li>Booleanos</li>
+                    <li>Cadeia de caracteres de tamanha fico e tamanha variável</li>
+                    <li>Data</li>
+                    <li>Hora</li>
+                </ul>
+                <p>
+                    Com essas informações, iremos criar uma tabela chamada <i>Funcionário</i>, contendo <strong>NOME DO
+                        CAMPO, TIPOS e TAMANHO</strong> assim podemos ver de forma clara as aplicações dos tipos.
+                </p>
+                <div class="figura"><img src="/src/img/img-Banco-de-Dados/figura-13.png" alt=""></div>
+                <figcaption class="figcaption">Tabela Funcionário.</figcaption>
+            </section>
+            <section>
+                <h3>Chave Estrangeira</h3>
+                <p>
+                    Trata-se de um campo na tabela que aponta para a chave primária de uma outra tabela.Assim trazendo
+                    uma relação entre duas entidades, seu objetivo é garantir a integridade dos dados referenciais,
+                    pois, nesses casos, serão permitidos valores que irão aparecer na base de dados. Vale relembrar que,
+                    após estabelecer uma chave estrangeira, o atributo marcado não permitirá a exclusão, inserção ou
+                    modificação de dados em tabelas que estejam dependentes uma da outra. Assim os administradores do
+                    banco de dados tem que ter uma maior atenção.
+                </p>
+                <div class="figura"><img src="/src/img/img-Banco-de-Dados/figura-14.png" alt=""></div>
+                <figcaption class="figcaption">Exemplo da aplicação de uma chave estrangeira entre duas tabelas
+                    (entidades).</figcaption>
+
+                <p>
+                    <b>Integridade referencial</b> é um conceito importante no uso de chaves estrangeiras. Ela garante
+                    que as relações entre tabelas permaneçam consistentes. Se um valor de chave estrangeira for alterado
+                    ou removido, a integridade referencial pode ser comprometida.
+                </p>
+                <p>
+                    <b>Restrição de Exclusão</b>
+                    Não é permitido excluir uma entrada de uma tabela pai (como Departamento) se houver entradas na
+                    tabela
+                    filha (como Funcionário) que referenciem essa entrada. Isso é para evitar registros órfãos na tabela
+                    filha.
+                </p>
+
+                <p>
+                    <b>Exemplo:</b>
+                    Se tentarmos excluir o departamento com Depto_Cod = 1 da tabela Funcionário, o banco de dados
+                    impedirá essa ação porque há funcionário na tabela Funcionário que ainda estão associado a esse
+                    departamento (João da Silva).
+                </p>
+                <p>
+                    <b>Restrição de Inserção</b>
+                    Não é permitido inserir um valor na chave estrangeira que não existe na tabela pai. Isso garante que
+                    todos os valores referenciados na tabela filha sejam válidos.
+                </p>
+                <p>
+                    <b>Exemplo:</b>
+                    Se tentarmos adicionar um novo departamento com Depto_Cod = 4 na tabela Funcionário, isso falhará
+                    porque não existe um departamento com Depto_Cod = 4 na tabela Departamento.
+                </p>
+                <p>
+                    <b>Restrição de Modificação</b>
+                    Não é permitido modificar a chave primária na tabela pai se houver registros na tabela filha que
+                    dependam dela. Isso impede que as referências na tabela filha se tornem inválidas.
+                </p>
+                <p>
+                    <b>Exemplo:</b>
+                    Se tentarmos alterar o Depto_Cod de 1 para 4 na tabela Departamento, o banco de dados não permitirá essa
+                    modificação, pois o funcionário João da Silva tem referencia Depto_Cod = 1.
+                </p>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>
